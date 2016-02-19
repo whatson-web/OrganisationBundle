@@ -1,7 +1,7 @@
 {
     "name": "wh/organisation-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony WHCmsBundle",
+    "description": "Symfony WHOrganisationBundle",
     "keywords": ["OrganisationBundle", "WH", "Symfony2"],
     "license": "GPL-3.0+",
     "authors": [
