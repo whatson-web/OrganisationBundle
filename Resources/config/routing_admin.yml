@@ -1,0 +1,32 @@
+#ORGANISATION
+whad_organisation:
+    path:     /{page}
+    defaults: { _controller: WHOrganisationBundle:Organisation:index, page: 1 }
+    requirements:
+        page: \d*
+
+whad_organisation_create:
+    path:     /create/{type}
+    defaults: { _controller: WHOrganisationBundle:Organisation:create, type: add }
+
+whad_organisation_update:
+    path:     /edit/{id}
+    defaults: { _controller: WHOrganisationBundle:Organisation:update }
+    requirements:
+        id:   \d+
+
+whad_organisation_show:
+    path:     /show/{id}
+    defaults: { _controller: WHOrganisationBundle:Organisation:show }
+    requirements:
+        id:   \d+
+
+whad_organisation_delete:
+    path:     /delete/{id}
+    defaults: { _controller: WHOrganisationBundle:Organisation:delete }
+    requirements:
+        id:   \d+
+
+whad_organisation_search_ajax:
+    path:     /search-json/
+    defaults: { _controller: WHOrganisationBundle:Organisation:searchAjax }
