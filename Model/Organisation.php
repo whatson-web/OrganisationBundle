@@ -171,6 +171,11 @@ abstract class Organisation
     protected $town;
 
     /**
+     * @ORM\Column(name="iframeGoogleMap", type="text", nullable=true)
+     */
+    protected $iframeGoogleMap;
+
+    /**
      * @var String
      * @ORM\Column(name="country", type="text", length=255, nullable=true)
      */
@@ -467,11 +472,32 @@ abstract class Organisation
     /**
      * Get town
      *
-     * @return string 
+     * @return string
      */
     public function getTown()
     {
         return $this->town;
+    }
+
+    /**
+     * @param $iframeGoogleMap
+     * @return $this
+     */
+    public function setIframeGoogleMap($iframeGoogleMap)
+    {
+        $this->iframeGoogleMap = $iframeGoogleMap;
+
+        return $this;
+    }
+
+    /**
+     * Get town
+     *
+     * @return string
+     */
+    public function getIframeGoogleMap()
+    {
+        return $this->iframeGoogleMap;
     }
 
     /**
