@@ -2,11 +2,8 @@
 
 namespace WH\OrganisationBundle\Model;
 
-use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Organisation
@@ -48,14 +45,12 @@ abstract class Organisation
     /**
      * @var string
      * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Vous devez préçiser un prénom")
      */
     protected $firstname;
 
     /**
      * @var string
      * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Vous devez préçiser un nom")
      */
     protected $lastname;
 
@@ -124,7 +119,6 @@ abstract class Organisation
     /**
      * @var String
      * @ORM\Column(name="mobile", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(message="Vous devez renseigner un numéro de téléphone valide")
      */
     protected $mobile;
 
@@ -138,7 +132,6 @@ abstract class Organisation
     /**
      * @var String
      * @ORM\Column(name="email", type="string", length=255, nullable=true)
-     * @Assert\Email()
      */
     protected $email;
 
@@ -146,7 +139,6 @@ abstract class Organisation
     /**
      * @var String
      * @ORM\Column(name="adress", type="text", length=255, nullable=true)
-     * @Assert\NotBlank(message="Vous devez renseigner une adresse")
      */
     protected $adress;
 
@@ -159,14 +151,12 @@ abstract class Organisation
     /**
      * @var String
      * @ORM\Column(name="zip_code", type="text", length=255, nullable=true)
-     * @Assert\NotBlank(message="Renseignez un code postal")
      */
     protected $zipCode;
 
     /**
      * @var String
      * @ORM\Column(name="town", type="text", length=255, nullable=true)
-     * @Assert\NotBlank(message="Renseignez une ville")
      */
     protected $town;
 
